@@ -43,4 +43,16 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.btn {
+  width: 230px;
+  border-radius: 25px;
+  padding: 15px;
+  color: white;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 70%);
 }/*# sourceMappingURL=main.css.map */

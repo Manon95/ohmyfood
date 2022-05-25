@@ -77,3 +77,13 @@ body {
     @include reset;
   }
 }
+
+.btn {
+  width: 230px;
+  border-radius: 25px;
+  padding: 15px;
+  color: white;
+  border: none;
+  @include fontstext_bold;
+  @include btn_background;
+}
