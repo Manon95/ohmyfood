@@ -54,3 +54,15 @@ body {
     font-size: 3rem;
   }
 }
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  background-color: $color-back;
+  box-shadow: 1px 20px 20px -20px rgb(0 0 0 / 57%) inset;
+  @include fontstext_bold;
+  &__text {
+    margin-left: 10px;
+  }
+}
