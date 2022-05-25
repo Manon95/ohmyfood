@@ -100,4 +100,20 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0px 0px;
+}
+
+a.card .card__content {
+  background: white;
+  border-radius: 0px 0px 25px 25px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+a.card .card__content .card__title {
+  margin: 0px;
+}
+
+.card__nouveau {
+  background: #99e2d0;
+  color: #528d7e;
+  padding: 5px;
 }/*# sourceMappingURL=main.css.map */
