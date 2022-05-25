@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/bd992ae6c0.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Ohmyfood</title>
-  </head>
-  <body>
-    <header>
-      <img src="images/logo/ohmyfood.png" />
-      <h1>Réservez le menu qui vous convient</h1>
-      <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-      <button class="explorer" type="button">Explorer nos restaurants</button>
-    </header>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="sass/main.css" />
+  <script src="https://kit.fontawesome.com/bd992ae6c0.js" crossorigin="anonymous"></script>
+  <title>Ohmyfood</title>
+</head>
+
+<body>
+  <header class="header">
+    <span class="header__logo">ohmyfood</span>
+  </header>
+
+  <main>
+    <div class="localisation">
+      <i class="fa-solid fa-location-dot"></i>
+      <span class="localisation__text"> Paris, Belleville </span>
+    </div>
+
+    <div class="principal">
+      <h1 class="principal__title">Réservez le menu qui vous convient</h1>
+      <p class="principal_subtitle">
+        Découvrez des restaurants d'exception, sélectionnés par nos soins.
+      </p>
+      <span class="btn-holder">
+        <button class="btn" type="button">
+          Explorer nos restaurants
+        </button></span>
+    </div>
+  </main>
+</body>
+
 </html>
