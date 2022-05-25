@@ -87,3 +87,27 @@ body {
   @include fontstext_bold;
   @include btn_background;
 }
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.fonctionnement__list {
+  @include reset;
+  .fonctionnement__listli {
+    padding: 15px;
+    margin: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px 4px rgba(0, 0, 0, 0.23);
+    background-color: white;
+    width: 250px;  
+    &:before {
+      display: inline-block;
+    }
+    &:hover {
+      background-color: #9356dc;
+    }
+  }
+}
