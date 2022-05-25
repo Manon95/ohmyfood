@@ -30,4 +30,17 @@ body {
 }
 .localisation__text {
   margin-left: 10px;
+}
+
+.principal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 5%;
+}
+.principal__title {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }/*# sourceMappingURL=main.css.map */
