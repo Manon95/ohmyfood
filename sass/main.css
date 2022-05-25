@@ -116,4 +116,19 @@ a.card .card__content .card__title {
   background: #99e2d0;
   color: #528d7e;
   padding: 5px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #2c2c2c;
+  color: white;
+  padding: 25px;
+}
+footer .footer__list {
+  list-style: none;
+  padding: 0px;
+}
+footer .footer__logo {
+  font-family: "Shrikhand", cursive;
 }/*# sourceMappingURL=main.css.map */
