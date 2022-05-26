@@ -1,0 +1,19 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin fontstext_bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+@mixin btn_background {
+  background: rgb(147, 86, 220);
+  background: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 70%
+  );
+}

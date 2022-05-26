@@ -1,37 +1,7 @@
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$color-back: #ececec;
-
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 
-@mixin reset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-@mixin fontstitle {
-  font-family: "Shrikhand", cursive;
-}
-
-@mixin fontstext {
-  font-family: "Roboto", sans-serif;
-}
-
-@mixin fontstext_bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-}
-
-@mixin btn_background {
-  background: rgb(147, 86, 220);
-  background: linear-gradient(
-    0deg,
-    rgba(147, 86, 220, 1) 0%,
-    rgba(255, 121, 218, 1) 70%
-  );
-}
 
 * {
   box-sizing: border-box;
@@ -43,14 +13,14 @@ a {
 }
 
 body {
-  @include fontstext;
+  font-family: $font-text;
 }
 
-.header {
-  &__logo {
-    @include fontstitle;
-    display: flex;
-    justify-content: center;
+header {
+  display: flex;
+  justify-content: center;
+  .header__logo {
+    font-family: $font-title;
     font-size: 3rem;
   }
 }
@@ -58,10 +28,10 @@ body {
 .localisation {
   display: flex;
   justify-content: center;
-  padding: 5%;
+  padding: 20px;
   background-color: $color-back;
   box-shadow: 1px 20px 20px -20px rgb(0 0 0 / 57%) inset;
-  @include fontstext_bold;
+  font-style: bold;
   &__text {
     margin-left: 10px;
   }
@@ -72,7 +42,7 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 5%;
+  padding: 20px;
   &__title {
     @include reset;
   }
@@ -91,11 +61,12 @@ body {
 .fonctionnement {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 20px;
 }
 
 .fonctionnement__list {
   @include reset;
+  margin: auto;
   .fonctionnement__listli {
     padding: 15px;
     margin: 25px;
@@ -113,8 +84,6 @@ body {
 }
 
 .restaurant {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   padding: 20px;
   background: $color-back;
@@ -130,7 +99,9 @@ body {
   border-radius: 20px 20px 0px 0px;
 }
 
-a.card {
+.cards {
+  display: flex;
+  flex-direction: column;
   .card__content {
       background: white;
       border-radius: 0px 0px 25px 25px;
