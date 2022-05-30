@@ -2,3 +2,88 @@
 @import "./utils/mixins.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 
+header {
+  align-items: center;
+  position: relative;
+  i.fa-arrow-left {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.card__img {
+  border-radius: 0px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 20px;
+  background-color: $color-back;
+  border-radius: 28px 28px 0px 0px;
+  max-width: 1000px;
+  i.fa-heart {
+    position: unset;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .content__title {
+    font-family: $font-title;
+    font-weight: 100;
+  }
+}
+
+.line {
+  border: solid $color-tertiary;
+  width: 50px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__content {
+  height: 60px;
+  width: 350px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 13px;
+}
+.menu__title {
+  font-family: $font-text;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1.05rem;
+}
+
+p.menu__txt--bold {
+  font-weight: bold;
+}
+
+.menu__txt {
+  font-size: 15px;
+}
+
+.price {
+  font-weight: bold;
+  float: right;
+}
+
+.btn__holder {
+  text-align: center;
+}

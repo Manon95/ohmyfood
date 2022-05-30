@@ -8,8 +8,18 @@ a {
   color: black;
 }
 
+.footer__link {
+  color: white;
+}
+
 body {
   font-family: "Roboto", cursive, sans-serif;
+}
+@media (min-width: 900px) {
+  body {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 header {
@@ -27,8 +37,6 @@ header .header__logo {
   padding: 20px;
   background-color: #ececec;
   box-shadow: 1px 20px 20px -20px rgba(0, 0, 0, 0.57) inset;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
 }
 .localisation__text {
   margin-left: 10px;
@@ -53,16 +61,35 @@ header .header__logo {
   padding: 15px;
   color: white;
   border: none;
+  cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   background: rgb(147, 86, 220);
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 70%);
+}
+.btn .btn__holder {
+  text-align: center;
 }
 
 .fonctionnement {
   display: flex;
   flex-direction: column;
   padding: 20px;
+}
+@media (min-width: 990px) {
+  .fonctionnement {
+    text-align: center;
+  }
+}
+
+.number {
+  background-color: #9356dc;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  width: 20px;
+  left: -10px;
+  text-align: center;
 }
 
 .fonctionnement__list {
@@ -78,12 +105,13 @@ header .header__logo {
   box-shadow: 0px 3px 10px 4px rgba(0, 0, 0, 0.23);
   background-color: white;
   width: 250px;
+  position: relative;
 }
 .fonctionnement__list .fonctionnement__listli:before {
   display: inline-block;
 }
 .fonctionnement__list .fonctionnement__listli:hover {
-  background-color: #9356dc;
+  background-color: #e4d5f6;
 }
 
 .restaurant {
@@ -107,11 +135,27 @@ header .header__logo {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 990px) {
+  .cards {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 10px;
+}
+@media (min-width: 990px) {
+  .cards .card {
+    width: 25%;
+  }
+}
 .cards .card__content {
   background: white;
   border-radius: 0px 0px 25px 25px;
   padding: 15px;
-  margin-bottom: 20px;
 }
 .cards .card__content .card__title {
   margin: 0px;
@@ -121,6 +165,20 @@ header .header__logo {
   background: #99e2d0;
   color: #528d7e;
   padding: 5px;
+  position: absolute;
+  top: 1%;
+  right: 3%;
+}
+
+.fa-heart {
+  font-size: 20px;
+  position: absolute;
+  right: 30px;
+  top: 220px;
+}
+.fa-heart:hover {
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 70%);
 }
 
 footer {
@@ -135,5 +193,5 @@ footer .footer__list {
   padding: 0px;
 }
 footer .footer__logo {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand", sans-serif;
 }/*# sourceMappingURL=main.css.map */

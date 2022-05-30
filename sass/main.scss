@@ -2,18 +2,25 @@
 @import "./utils/mixins.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 
-
 * {
   box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+}
+
+.footer__link {
+  color: white;
 }
 
 body {
   font-family: $font-text;
+  @media (min-width: 900px) {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 header {
@@ -31,7 +38,6 @@ header {
   padding: 20px;
   background-color: $color-back;
   box-shadow: 1px 20px 20px -20px rgb(0 0 0 / 57%) inset;
-  font-style: bold;
   &__text {
     margin-left: 10px;
   }
@@ -54,14 +60,31 @@ header {
   padding: 15px;
   color: white;
   border: none;
+  cursor: pointer;
   @include fontstext_bold;
   @include btn_background;
+  .btn__holder {
+    text-align: center;
+  }
 }
 
 .fonctionnement {
   display: flex;
   flex-direction: column;
   padding: 20px;
+    @media (min-width: 990px) {
+      text-align: center;
+    }
+}
+
+.number {
+  background-color: $color-primary;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  width: 20px;
+  left: -10px;
+  text-align: center;
 }
 
 .fonctionnement__list {
@@ -73,12 +96,13 @@ header {
     border-radius: 10px;
     box-shadow: 0px 3px 10px 4px rgba(0, 0, 0, 0.23);
     background-color: white;
-    width: 250px;  
+    width: 250px;
+    position: relative;
     &:before {
       display: inline-block;
     }
     &:hover {
-      background-color: #9356dc;
+      background-color: lighten($color: $color-primary, $amount: 30%);
     }
   }
 }
@@ -88,7 +112,7 @@ header {
   padding: 20px;
   background: $color-back;
   &__title {
-      padding: 15px
+    padding: 15px;
   }
 }
 
@@ -102,21 +126,47 @@ header {
 .cards {
   display: flex;
   flex-direction: column;
+    @media (min-width: 990px) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 10px;
+    @media (min-width: 990px) {
+      width: 25%;
+    }
+  }
   .card__content {
-      background: white;
-      border-radius: 0px 0px 25px 25px;
-      padding: 15px;
-      margin-bottom: 20px;
-      .card__title {
-          margin: 0px;
-      }
-  }   
+    background: white;
+    border-radius: 0px 0px 25px 25px;
+    padding: 15px;
+    .card__title {
+      margin: 0px;
+    }
+  }
 }
 
 .card__nouveau {
   background: $color-tertiary;
   color: #528d7e;
   padding: 5px;
+  position: absolute;
+  top: 1%;
+  right: 3%;
+}
+
+.fa-heart {
+  font-size: 20px;
+  position: absolute;
+  right: 30px;
+  top: 220px;
+  &:hover {
+    @include btn_background;
+  }
 }
 
 footer {
@@ -126,10 +176,10 @@ footer {
   color: white;
   padding: 25px;
   .footer__list {
-      list-style: none;
-      padding: 0px;
+    list-style: none;
+    padding: 0px;
   }
   .footer__logo {
-      @include fontstitle;
+    font-family: $font-title;
   }
 }
