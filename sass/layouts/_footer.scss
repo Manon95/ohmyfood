@@ -1,0 +1,17 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #2c2c2c;
+    color: white;
+    padding: 25px;
+    .footer__list {
+      list-style: none;
+      padding: 0px;
+    }
+    .footer__logo {
+      font-family: $font-title;
+    }
+    .footer__link {
+        color: white;
+      }
+  }

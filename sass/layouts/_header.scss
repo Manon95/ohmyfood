@@ -1,0 +1,31 @@
+// header de l index
+
+header {
+  display: flex;
+  justify-content: center;
+  .header__logo {
+    font-family: $font-title;
+    font-size: 3rem;
+  }
+}
+
+// icone du header du menu
+
+.fa-arrow-left {
+position: absolute;
+left: 10px;
+top: 20px;
+}
+
+// header du menu
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  .content__title {
+    font-family: $font-title;
+    font-weight: 100;
+  }
+}
