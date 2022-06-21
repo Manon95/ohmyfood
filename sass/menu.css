@@ -9,9 +9,12 @@ header i.fa-arrow-left {
   top: 20px;
 }
 
-p {
+p, h3 {
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .card__img {
@@ -26,6 +29,8 @@ p {
   background-color: #ececec;
   border-radius: 28px 28px 0px 0px;
   max-width: 1000px;
+  position: relative;
+  top: -30px;
 }
 .menu i.fa-heart {
   position: unset;
@@ -33,9 +38,9 @@ p {
 
 .content {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 .content .content__title {
   font-family: "Shrikhand", sans-serif;
@@ -49,19 +54,82 @@ p {
 
 .article {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .menu__content {
+  display: flex;
   height: 60px;
-  width: 350px;
+  width: 100%;
   background-color: white;
   border-radius: 10px;
   margin: 10px;
-  padding: 13px;
+  overflow: hidden;
+  -webkit-animation: menu-anim 2s;
+          animation: menu-anim 2s;
+}
+.menu__content .price__check {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 0px;
+  border-radius: inherit;
+  background-color: #99e2d0;
+}
+.menu__content .fa-check {
+  color: #99e2d0;
+  background-color: white;
+  border-radius: 50%;
+  margin: auto;
+  padding: 3px;
+}
+.menu__content:hover {
+  cursor: pointer;
+}
+.menu__content:hover .price__check {
+  width: 60px;
+  transition: width 0.5s;
+}
+.menu__content:hover .fa-check {
+  -webkit-animation: rotation-check 0.5s ease-in-out;
+          animation: rotation-check 0.5s ease-in-out;
 }
 
+@-webkit-keyframes rotation-check {
+  from {
+    transform: rotate(-190deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotation-check {
+  from {
+    transform: rotate(-190deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes menu-anim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes menu-anim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .menu__title {
   font-family: "Roboto", cursive, sans-serif;
   text-transform: uppercase;
@@ -69,17 +137,36 @@ p {
   font-size: 1.05rem;
 }
 
-p.menu__txt--bold {
-  font-weight: bold;
+.menu__content:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.menu__content:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.menu__content:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .menu__txt {
   font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .price {
   font-weight: bold;
-  float: right;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 .btn__holder {

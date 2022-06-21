@@ -10,10 +10,20 @@
 }
 
 @mixin btn_background {
-  background: rgb(147, 86, 220);
   background: linear-gradient(
     0deg,
     rgba(147, 86, 220, 1) 0%,
     rgba(255, 121, 218, 1) 70%
   );
+}
+
+@mixin text-cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

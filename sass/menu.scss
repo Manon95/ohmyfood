@@ -12,9 +12,10 @@ header {
   }
 }
 
-p {
-  margin: 0;
-  padding: 0;
+p, h3 {
+  @include reset;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .card__img {
@@ -29,6 +30,8 @@ p {
   background-color: $color-back;
   border-radius: 28px 28px 0px 0px;
   max-width: 1000px;
+  position: relative;
+  top: -30px;
   i.fa-heart {
     position: unset;
   }
@@ -36,9 +39,9 @@ p {
 
 .content {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   .content__title {
     font-family: $font-title;
     font-weight: 100;
@@ -51,19 +54,65 @@ p {
 }
 
 .article {
-  display: flex;
+  @include center;
   flex-direction: column;
-  align-items: center;
+  
 }
 
 .menu__content {
+  display: flex;
   height: 60px;
-  width: 350px;
+  width: 100%;
   background-color: white;
   border-radius: 10px;
   margin: 10px;
-  padding: 13px;
+  overflow: hidden;
+  animation: menu-anim 2s;
+  .price__check {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 0px;
+    border-radius: inherit;
+    background-color: $color-tertiary;
+  }
+  .fa-check {
+    color: $color-tertiary;
+    background-color: white;
+    border-radius: 50%;
+    margin: auto;
+    padding: 3px;
+  }
+  &:hover {
+    cursor: pointer;
+    .price__check {
+      width: 60px;
+      transition: width 0.5s;
+    }
+    .fa-check {
+      animation: rotation-check 0.5s ease-in-out;
+    }
+  }
 }
+
+@keyframes rotation-check {
+  from {
+    transform: rotate(-190deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes menu-anim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .menu__title {
   font-family: $font-text;
   text-transform: uppercase;
@@ -71,19 +120,30 @@ p {
   font-size: 1.05rem;
 }
 
-p.menu__txt--bold {
-  font-weight: bold;
+@for $i from 1 through 3 {
+  .menu__content:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+  }
 }
 
 .menu__txt {
   font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .price {
   font-weight: bold;
-  float: right;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 .btn__holder {
   text-align: center;
 }
+
